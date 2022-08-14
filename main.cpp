@@ -10,9 +10,11 @@ int main()
 	Vector c1, c2;
 
 	cout << "VECTOR FUNCTIONS CHECK:" << endl;
-
+	// print a and b vectors
 	cout << "a = " << a << endl 
 		<< "b = " << b << endl;
+
+	// print add scaler result
 
 	c1 = a + 2;
 	c2 = 2 + a;
@@ -21,6 +23,8 @@ int main()
 		<< ",\t  2 + a = " << c2
 		<< endl;
 
+	// print duplicate scaler result
+
 	c1 = a * 3;
 	c2 = 3 * a;
 
@@ -28,6 +32,8 @@ int main()
 		<< ",\t  3 * a = " << c2
 		<< endl;
 	
+	// print duplicate vector result
+
 	c1 = a * b;
 	c2 = b * a;
 
@@ -35,10 +41,14 @@ int main()
 		<< ", b * a = " << c2
 		<< endl;
 
+	// print dot product
+
 	cout << "dot product:"
 		<< " ab = " << a.dot(b)
 		<< ", ba = " << b.dot(a)
 		<< endl;
+
+	// print columns value and not valid column
 
 	cout << endl << "CLOUMN CHECK:" << endl;
 	for (int i = a.getSize(); i >= 0; i--)
@@ -48,6 +58,8 @@ int main()
 		else
 			cout << " ," << i << ": " << a[i];
 	}
+
+	// print comparison
 	cout << endl << "a = b? " << ((a == b) ? " True" : " False") << endl;
 	cout <<			"a = a? " << ((a == a) ? " True" : " False") << endl;
 
