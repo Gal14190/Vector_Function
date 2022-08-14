@@ -3,7 +3,7 @@
 int main()
 {
 	double arr_a[] = { 2.1, 3.5, 6.2, 4.8 };
-	double arr_b[] = { 4.2, 3.1, 5.2, 9.4 };
+	double arr_b[] = { 4.2, 3.1, 5.2, 9.4};
 
 	Vector a(arr_a, 4);
 	Vector b(arr_b, 4);

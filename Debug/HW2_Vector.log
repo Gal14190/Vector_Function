@@ -1,2 +1,9 @@
-﻿  main.cpp
+﻿  Vector.cpp
+  main.cpp
+  Generating Code...
+C:\Users\GalAs\source\repos\HW2_Vector\HW2_Vector\Vector.cpp(104): warning C4172: returning address of local variable or temporary: result
+C:\Users\GalAs\source\repos\HW2_Vector\HW2_Vector\Vector.cpp(42): warning C4172: returning address of local variable or temporary: result
+C:\Users\GalAs\source\repos\HW2_Vector\HW2_Vector\Vector.cpp(81): warning C4172: returning address of local variable or temporary: result
+C:\Users\GalAs\source\repos\HW2_Vector\HW2_Vector\Vector.cpp(51): warning C4172: returning address of local variable or temporary: ERROR_REF
+C:\Users\GalAs\source\repos\HW2_Vector\HW2_Vector\Vector.cpp(65): warning C4172: returning address of local variable or temporary: result
   HW2_Vector.vcxproj -> C:\Users\GalAs\source\repos\HW2_Vector\Debug\HW2_Vector.exe
