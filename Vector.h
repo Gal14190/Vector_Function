@@ -56,7 +56,7 @@ public:
 	* 
 	* @return cartesian product
 	*/
-	double& dot(
+	double dot(
 		Vector& v	// vector two
 	);
 

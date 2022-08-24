@@ -17,6 +17,7 @@ Vector::Vector(double a[], int n):Vector(n)
 
 Vector::~Vector()
 {
+	delete [] this->elements;
 }
 
 int Vector::getSize()
@@ -24,7 +25,7 @@ int Vector::getSize()
 	return this->size;
 }
 
-double& Vector::dot(Vector& v)
+double Vector::dot(Vector& v)
 {
 	double result = 0;
 
@@ -56,13 +57,13 @@ double& Vector::operator[] (int ind)
 
 Vector& Vector::operator+ (double d) const
 {
-	Vector result(this->elements, this->size);
+	Vector* result = new Vector(this->elements, this->size);
 
 	// add every column with scaler
-	for (int i = 0; i < result.size; i++)
-		result[i] += d;
+	for (int i = 0; i < result->size; i++)
+		result->elements[i] += d;
 
-	return result;
+	return *result;
 }
 
 Vector& operator+ (double d, Vector& v) 
@@ -72,13 +73,13 @@ Vector& operator+ (double d, Vector& v)
 
 Vector& Vector::operator* (double d) const
 {
-	Vector result(this->elements, this->size);
+	Vector* result = new Vector(this->elements, this->size);
 
 	// duplicate every column with scaler
-	for (int i = 0; i < result.getSize(); i++)
-		result[i] *= d;
+	for (int i = 0; i < result->size; i++)
+		result->elements[i] *= d;
 
-	return result;
+	return *result;
 }
 
 Vector& operator* (double d, Vector& v)
@@ -88,7 +89,7 @@ Vector& operator* (double d, Vector& v)
 
 Vector& Vector::operator* (const Vector& v) const
 {
-	Vector result(this->elements, this->size);
+	Vector* result = new Vector(this->elements, this->size);
 
 	// check if the two vectors valid with the same length
 	if (this->size != v.size)
@@ -98,10 +99,10 @@ Vector& Vector::operator* (const Vector& v) const
 	}
 		
 	// duplicate every column with vector value
-	for (int i = 0; i < result.getSize(); i++)
-		result[i] *= v.elements[i];
+	for (int i = 0; i < result->size; i++)
+		result->elements[i] *= v.elements[i];
 
-	return result;
+	return *result;
 }
 
 bool Vector::operator== (Vector& v)
